@@ -25,13 +25,13 @@ public class Main {
 
         System.out.println(registro.obtenerTodos());
 
-        registro.obtenerVehiculo("4749JAV").ifPresent(coche -> System.out.println("Coche con matricula 4749JAV: " + coche));
+        //registro.obtenerVehiculo("4749JAV").ifPresent(coche -> System.out.println("Coche con matricula 4749JAV: " + coche));
 
         registro.obtenerVehiculosMarca("Lexus").forEach(coche -> System.out.println(coche));
                 // esto es un bucle tradicional expresado con Java 8
 
 
-        registro.obtenerVehiculoPrecioMax().ifPresent(coche -> System.out.println("Coche Max precio: " + coche));
+        //registro.obtenerVehiculoPrecioMax().ifPresent(coche -> System.out.println("Coche Max precio: " + coche));
                 // esta expresión es equivalente a verificar diferente de null con Java 8
 
 

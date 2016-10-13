@@ -21,17 +21,27 @@ public class RegistroVehiculos {
     }
 
     public void eliminarVehiculo(String matricula){
+        Coche aux=null;
             for(Coche coche : coches){
                 if(coche.getMatricula().equals(matricula)){
-                    coches.remove(coche);
+                    aux=coche;
                 }
             }
+        if(aux!=null) {
+            coches.remove(aux);
+        }
     }
 
     public List <Coche> obtenerVehiculosMarca(String marca){
-        return null;
+        List<Coche> vehiculos = new ArrayList<>();
+        for(Coche coche : coches){
+            if(coche.getMarca().equals(marca)){
+                vehiculos.add(coche);
+            }
+        }
+        return vehiculos;
     }
     public List <Coche> obtenerTodos(){
-        return null;
+        return new ArrayList<>(coches);
     }
 }
